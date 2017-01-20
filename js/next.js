@@ -18,14 +18,14 @@ $(document).ready(function() {
 	// Text Options
 	let wakeUp = "Wake up, Neo...",
 	knock = "Knock, knock, Neo...",
-	about = 'My name is Alexander Kallaway, and I am a Front End Developer.',
+	about = 'Mi nombre es Jorge Ruvalcaba, y soy un Front End Developer.',
 	writeCode = "I write code",
 	learnMore = "Learn more",
 	quote = "There is no spoon.",
-	listCommands = 'Available commands: [about] [bio] [clear] [contact] [skills] [social] [portfolio] [quote]',
+	listCommands = 'Comandos disponibles: [about] [bio] [clear] [family] [hobbies] [contact]',
 	commandNotFound = 'Command not found. Don\'t worry, it\'s probably just a glitch in the Matrix. Gli Glitch in the Matrix trix.',
-	skills = "Main: HTLM5, CSS3, AngularJS, D3, GIT and Github.\n Familiar with: ReactJS, Haxe, OpenFL, Python, THREE.js, Node.js.",
-	contact = "Contact me on Twitter -> @ka11away";
+	hobbies = "Desde pequeño he sido muy curioso, por lo que he tenido la oportunidad de ser: jugador amateur de futbol, dj y desarrollador web.",
+	contact = "Sígueme en Twitter -> @_joruv";
 	// let
 
 	let arrowNavigationMode = false;
@@ -60,7 +60,7 @@ $(document).ready(function() {
 		return quotes[randomIndex];
 	}
 
-	let list = "For a list of available commands, type 'help'";
+	let list = "Para ver la lista de comandos disponibles escribe 'help'";
 
 	function generateContactHTML() {
 		let contact = $('<ul id="abilities"></ul>');
@@ -138,7 +138,8 @@ $(document).ready(function() {
 	// <li><i class="fa fa-suitcase"></i> <a href="https://www.vretta.com/" target="_blank">work</a></li>
 
 
-	let shortBio = 'Self-taught web developer, absolutely passionate about coding and the future of technology. I am constantly learning and expanding my skills. While you are reading this, I am probably busy learning something new. I am interested in habit development, language learning (currently French), startups.';
+	let shortBio = 'Web developer autodidacta, absolutamente apasionado acerca de coding y del futuro de la tecnología. Constantemente aprendiendo y mejorando mis habilidades. Esta página es resultado de algo que aprendí recientemente. En este momento estoy interesado en temas como habit development, startups, música electrónica y web dev.';
+  let family = 'Segundo de tres hijos (si, el sandwich). Desde pequeño viví en Tototlán, Jalisco; donde mis padres trabajan como médicos. Mi hermana Isabel estudió enfermería y mi hermano José, medicina.';
 	let typeSpeedSuperFast = 30;
 	let typeSpeedSlow = 75;
 	let typeSpeedFast = 60; // in ms
@@ -193,6 +194,9 @@ $(document).ready(function() {
 				clearTerminal();
 				let listEl = addToTerminal(list, typeSpeedFast, true);
 				break;
+      case 'family':
+        let familyEl = addToTerminal(family, typeSpeedFast, false);
+        break;
 			case 'contact':
 				let contactEl = addToTerminal(contact, typeSpeedFast, true);
 				break;
@@ -206,30 +210,23 @@ $(document).ready(function() {
 				break;
 			case "list":
 				break;
-
-			case 'skills':
-
-				let skillsEl = addToTerminal(skills, typeSpeedFast, false);
+			case 'hobbies':
+				let skillsEl = addToTerminal(hobbies, typeSpeedFast, false);
 				// generateSkillHTML();
 				// $('#abilities').show();
 				break;
-
 			case 'social':
 				// optimize this code and the code below - maybe in a function
 				let socialHTML = generateContactHTML();
 				let socialEl = addHTMLToTerminal(socialHTML);
 				break;
-
 			case 'portfolio':
 				let portfolioHTML = generatePortfolioHTML();
 				let portfolioEl = addHTMLToTerminal(portfolioHTML);
 				break;
-
 			case 'quote':
-
 				let quoteEl = addToTerminal(getRandomQuote(), typeSpeedFast, false);
 				break;
-
 			case '':
 				break;
 			default:
@@ -249,7 +246,6 @@ $(document).ready(function() {
 	}
 
 	function init() {
-
 		// improve this code
 		setTimeout(function() {
 			let wakeupEl = addToTerminal(wakeUp,  typeSpeedSlow, true);
@@ -258,16 +254,12 @@ $(document).ready(function() {
 		setTimeout(function() {
 			let listEl = addToTerminal(list, typeSpeedFast, true);
 		}, 3500);
-
 		setTimeout(function() {
 			$('#term-prompt').html('&#9612;');
 			$('#terminal-line').show();
 			$('#term-prompt').focus();
-
 		}, 6500);
-
 		// make "I write code" to be text first, and then change it to link?
-
 	}
 
 	$('body').on('click', function() {
