@@ -24,7 +24,7 @@ $(document).ready(function() {
 	quote = "There is no spoon.",
 	listCommands = 'Comandos disponibles: [about] [bio] [clear] [family] [hobbies] [contact]',
 	commandNotFound = 'Command not found. Don\'t worry, it\'s probably just a glitch in the Matrix. Gli Glitch in the Matrix trix.',
-	hobbies = "Desde pequeño he sido muy curioso, por lo que he tenido la oportunidad de ser: jugador amateur de futbol, dj y desarrollador web.",
+	hobbies = "Desde pequeño he sido muy curioso, por lo que con dedicación he tenido la oportunidad de ser: jugador amateur de futbol, dj y desarrollador web.",
 	contact = "Sígueme en Twitter -> @_joruv";
 	// let
 
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
 
 	let shortBio = 'Web developer autodidacta, absolutamente apasionado acerca de coding y del futuro de la tecnología. Constantemente aprendiendo y mejorando mis habilidades. Esta página es resultado de algo que aprendí recientemente. En este momento estoy interesado en temas como habit development, startups, música electrónica y web dev.';
-  let family = 'Segundo de tres hijos (si, el sandwich). Desde pequeño viví en Tototlán, Jalisco; donde mis padres trabajan como médicos. Mi hermana Isabel estudió enfermería y mi hermano José, medicina.';
+  let family = 'Segundo de tres hijos (si, el sandwich). Desde pequeño viví en Tototlán, Jalisco; donde mis padres trabajan como médicos. Mi hermana Isabel estudió enfermería y mi hermano José, medicina. Soy la oveja negra de la familia.';
 	let typeSpeedSuperFast = 30;
 	let typeSpeedSlow = 75;
 	let typeSpeedFast = 60; // in ms
