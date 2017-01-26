@@ -18,14 +18,14 @@ $(document).ready(function() {
 	// Text Options
 	let wakeUp = "Wake up, Neo...",
 	knock = "Knock, knock, Neo...",
-	about = 'Mi nombre es Jorge Ruvalcaba, y soy un Front End Developer.',
+	about = 'My name is Jorge Ruvalcaba, and I am a Front End Developer.',
 	writeCode = "I write code",
 	learnMore = "Learn more",
 	quote = "There is no spoon.",
-	listCommands = 'Comandos disponibles: [about] [bio] [clear] [family] [hobbies] [contact]',
+	listCommands = 'Available commands: [about] [bio] [clear] [contact] [skills] [social] [portfolio] [quote]',
 	commandNotFound = 'Command not found. Don\'t worry, it\'s probably just a glitch in the Matrix. Gli Glitch in the Matrix trix.',
 	hobbies = "Desde pequeño he sido muy curioso, por lo que con dedicación he tenido la oportunidad de ser: jugador amateur de futbol, dj y desarrollador web.",
-	contact = "Sígueme en Twitter -> @_joruv";
+	contact = "Contact me on Twitter -> @_joruv";
 	// let
 
 	let arrowNavigationMode = false;
@@ -60,38 +60,38 @@ $(document).ready(function() {
 		return quotes[randomIndex];
 	}
 
-	let list = "Para ver la lista de comandos disponibles escribe 'help'";
+	let list = "For a list of available commands, type 'help'";
 
 	function generateContactHTML() {
 		let contact = $('<ul id="abilities"></ul>');
 
-		let codewars = $('<li></li>');
+		let codepen = $('<li></li>');
 		let github = $('<li></li>'); // optimize this
 		let linkedin = $('<li></li>');
 		let twitter = $('<li></li>');
 
 
 		let githubLink = $('<a>Github</a>').attr({
-			'href': 'https://github.com/kallaway/',
+			'href': 'https://github.com/jorgeruvalcaba',
 			'target': '_blank'
 		});
 
 		let twitterLink = $('<a>Twitter</a>').attr({
-			'href': 'https://twitter.com/ka11away',
+			'href': 'https://twitter.com/_joruv',
 			'target': '_blank'
 		});
 
-		let codewarsLink = $('<a>Codewars</a>').attr({
-			'href': 'http://www.codewars.com/users/Kallaway',
+		let codepenLink = $('<a>Codepen</a>').attr({
+			'href': 'https://codepen.io/jorgeruvalcaba/',
 			'target': '_blank'
 		});
 
 		let linkedinLink = $('<a>LinkedIn</a>').attr({
-			'href': 'https://ca.linkedin.com/in/kallaway',
+			'href': 'https://www.linkedin.com/in/jorgerauvalcaba/',
 			'target': '_blank'
 		})
 
-		codewars.append(codewarsLink);
+		codepen.append(codepenLink);
 		github.append(githubLink);
 		linkedin.append(linkedinLink);
 		twitter.append(twitterLink);
@@ -100,7 +100,7 @@ $(document).ready(function() {
 		console.log("$$$ Github element is currently: ");
 		console.log(github);
 
-		contact.append(codewars);
+		contact.append(codepen);
 		contact.append(github);
 		contact.append(linkedin);
 		contact.append(twitter);
@@ -117,7 +117,7 @@ $(document).ready(function() {
 		let portfolioContainer = $('<div></div>');
 
 		let portfolioLink = $('<a>here</a>').attr({
-			'href': 'https://codepen.io/kallaway/',
+			'href': 'https://codepen.io/jorgeruvalcaba/',
 			'target': '_blank'
 		});
 
@@ -132,13 +132,13 @@ $(document).ready(function() {
 	function generateSkillHTML() {
 		let skillsFullOne = $('<div id="skills"></div>');
 
-		let skillsFull = $('<div id="skills"><p>> list skill</p><p>> where &lt;skill&gt; is one of:<skill><p class="subresult">HTLM5, CSS3, AngularJS, D3, GIT and Github, </p></div><div id="familiar"><p>> list familiar area:</p><p>> where &lt;area&gt; is one of:</p><p class="subresult">Haxe, OpenFL, Python, THREE.js, Node.js</p></div>')
+		let skillsFull = $('<div id="skills"><p>> list skill</p><p>> where &lt;skill&gt; is one of:<skill><p class="subresult">HTLM5, CSS3, AngularJS, GIT and Github, </p></div><div id="familiar"><p>> list familiar area:</p><p>> where &lt;area&gt; is one of:</p><p class="subresult">Haxe, OpenFL, Python, THREE.js, Node.js</p></div>')
 	}
 
 	// <li><i class="fa fa-suitcase"></i> <a href="https://www.vretta.com/" target="_blank">work</a></li>
 
 
-	let shortBio = 'Web developer autodidacta, absolutamente apasionado acerca de coding y del futuro de la tecnología. Constantemente aprendiendo y mejorando mis habilidades. Esta página es resultado de algo que aprendí recientemente. En este momento estoy interesado en temas como habit development, startups, música electrónica y web dev.';
+	let shortBio = 'Self-taught web developer, absolutely passionate about coding and the future of technology. I am constantly learning and expanding my skills. While you are reading this, I am probably busy learning something new. I am interested in habit development, web development in general, startups.';
   let family = 'Segundo de tres hijos (si, el sandwich). Desde pequeño viví en Tototlán, Jalisco; donde mis padres trabajan como médicos. Mi hermana Isabel estudió enfermería y mi hermano José, medicina. Soy la oveja negra de la familia.';
 	let typeSpeedSuperFast = 30;
 	let typeSpeedSlow = 75;
