@@ -24,7 +24,6 @@ $(document).ready(function() {
 	quote = "There is no spoon.",
 	listCommands = 'Available commands: [about] [bio] [clear] [contact] [skills] [social] [portfolio] [quote]',
 	commandNotFound = 'Command not found. Don\'t worry, it\'s probably just a glitch in the Matrix. Gli Glitch in the Matrix trix.',
-	hobbies = "Desde pequeño he sido muy curioso, por lo que con dedicación he tenido la oportunidad de ser: jugador amateur de futbol, dj y desarrollador web.",
 	contact = "Contact me on Twitter -> @_joruv";
 	// let
 
@@ -210,8 +209,8 @@ $(document).ready(function() {
 				break;
 			case "list":
 				break;
-			case 'hobbies':
-				let skillsEl = addToTerminal(hobbies, typeSpeedFast, false);
+			case 'skills':
+				let skillsEl = addToTerminal(skills, typeSpeedFast, false);
 				// generateSkillHTML();
 				// $('#abilities').show();
 				break;
